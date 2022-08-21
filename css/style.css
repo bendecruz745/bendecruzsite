@@ -10,20 +10,32 @@
   --bg-secondary: #8F4E25;
 }
 
-
-
 header {
   background-color: var(--bg-primary);
+}
+
+main {
+  margin-left: 5rem;
+  padding-left: 1rem;
+  width: 70%;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 body {
   background-color: #d79e5c88;
   margin: 0;
   padding: 0;
-}
-
-main {
-  width: 50%;
+  width: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -37,6 +49,54 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
+
+.navbar {
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  transition: width 200ms ease;
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: opacity(0.5);
+  transition: 300ms;
+}
+
+.nav-link:hover {
+  filter: opacity(1);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link svg {
+  min-width: 2.5rem;
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  fill: #fff;
+
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
 
 header {
   margin-left: 5rem;
@@ -58,60 +118,16 @@ header {
   margin-left: 1rem;
 }
 
-.nav-link {
-  display: flex;
-  align-items: center;
-  height: 4rem;
-  color: var(--text-primary);
-  text-decoration: none;
-  filter: opacity(0.5);
-  transition: 300ms;
-}
 
-.nav-link:hover {
-  filter: opacity(1);
-  background: rgba(0, 0, 0, 0.5);
-}
 
 .active {
   filter: opacity(1);
   background: rgba(0, 0, 0, 0.5);
 }
 
-.nav-link svg {
-  min-width: 2.5rem;
-  width: 2.5rem;
-  margin: 0 1.25rem;
-  fill: #fff;
-  
-}
 
-main {
-  margin-left: 5rem;
-  padding: 1rem;
-}
 
-.navbar {
-  position: fixed;
-  background-color: var(--bg-primary);
-  transition: width 200ms ease;
-}
 
-.navbar:hover {
-  width: 16rem;
-}
-
-.navbar:hover .link-text {
-  display: block;
-}
-
-.nav-item {
-  width: 100%;
-}
-
-.nav-item:last-child {
-  margin-top: auto;
-}
 
 
 /* For Smaller Screens */
@@ -120,6 +136,29 @@ main {
 
   .navbar {
     height: 100%;
+    width: 3rem;
+    transition: width 0ms ease;
+  }
+
+  .nav-link svg {
+    min-width: 1.5rem;
+    width: 1.5rem;
+    margin: 0 .75rem;
+    fill: #fff;
+  
+  }
+
+  .navbar:hover {
+    width: 12rem;
+  }
+
+  header {
+    margin-left: 3rem;
+  }
+
+  main {
+    width: auto;
+    margin-left: 3rem;
   }
 }
 
@@ -130,6 +169,5 @@ main {
   .navbar {
     top: 0;
     width: 5rem;
-    height: 100vh;
   }
 }
