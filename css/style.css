@@ -10,19 +10,20 @@
   --bg-secondary: #8F4E25;
 }
 
-main {
-  background-color: #d79e5c88;
-}
+
 
 header {
   background-color: var(--bg-primary);
 }
 
 body {
-  color: black;
-  background-color: white;
+  background-color: #d79e5c88;
   margin: 0;
   padding: 0;
+}
+
+main {
+  width: 50%;
 }
 
 body::-webkit-scrollbar {
